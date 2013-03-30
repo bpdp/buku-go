@@ -28,7 +28,6 @@
     citecolor={BrickRed}, urlcolor={NavyBlue}
 }
 
-
 \definecolor{lightgray}{rgb}{.9,.9,.9}
 \definecolor{darkgray}{rgb}{.4,.4,.4}
 \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
@@ -84,13 +83,20 @@
 	sensitive=true
 }
 
-
 \usepackage{colortbl}
 
 \input{./components/rgb.tex}
 \input{./components/renew.tex}
 
 \setcounter{tocdepth}{5}
+
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFont{black}{\color{black}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{ format=listing, labelfont=black, textfont=black, singlelinecheck=false, margin=0pt, font={bf,footnotesize} }
+\lstset{numbers=left,basicstyle=\scriptsize,numberstyle=\scriptsize,frame=tb,captionpos=t,backgroundcolor=\color{light-gray},showspaces=false,showstringspaces=false}
+
 
 \begin{document}
 
@@ -108,7 +114,6 @@
 % \KOMAoptions{bibliography=openstyle}
 
  \definecolor{light-gray}{gray}{0.95}
- \lstset{numbers=left,basicstyle=\scriptsize,numberstyle=\scriptsize,frame=tb,captionpos=b,backgroundcolor=\color{light-gray},showspaces=false,showstringspaces=false}
 
  \input{./components/cover.tex}
  \input{./components/abstract.tex}
