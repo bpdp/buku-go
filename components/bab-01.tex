@@ -20,6 +20,8 @@ Go didistribusikan dengan menggunakan lisensi modifikasi dari BSD. Lisensi lengk
 
 \section{Instalasi Go}
 
+\subsection{Distribusi Go}
+
 Go tersedia pada berbagai platform. Proyek Go sendiri secara resmi mendukung platform Linux, FreeBSD, MacOSX, dan Windows. Dukungan tersebut merupakan dukungan resmi dan distribusi \textit{binary} dari berbagai platform tersebut tersedia di \url{https://code.google.com/p/go/downloads/list} seperti bisa dilihat di Gambar~\ref{fig:downloadGo}
 
   \begin{figure}
@@ -32,6 +34,39 @@ Go tersedia pada berbagai platform. Proyek Go sendiri secara resmi mendukung pla
 
 	Dengan dukungan tersebut, Proyek Go akan menerima laporan \textit{bugs} terkait dengan distribusi pada berbagai platform tersebut. Meski demikian, bukan berarti platform-platform lain tidak bisa menggunakan Go karena distribusi dalam bentuk kode sumber tersedia dan telah berhasil dikompilasi ke berbagai platform: NetBSD, OpenBSD, DragonFlyBSD, dan lain-lain\footnote{Lihat \url{http://go-lang.cat-v.org/os-ports}} untuk perkembangan dalam hal ini.
 
+\subsection{Download dan Install Go}
+
+Meski mendukung banyak platform, di buku ini hanya akan dibahas penggunaan Go di platform Linux. Pada dasarnya peranti pengembang yang disediakan sama. Silahkan menyesuaikan dengan platform yang anda gunakan. Setelah mengambil distribusi Go dari URL \url{https://code.google.com/p/go/downloads/list} (untuk kasus ini, kita akan mengambil file \textbf{go1.0.3.linux-386.tar.gz}). Setelah itu, ikuti langkah-langkah pada Listing~\ref{lst:installGo}.
+
+\lstset{language=Go, caption=Download dan install Go, label={lst:installGo}}
+\lstinputlisting{src/non-go/bab-01/download-install-go.txt}
+
+\subsection{Konfigurasi Variabel Lingkungan Sistem Operasi}
+
+Go menggunakan beberapa variabel lingkungan sistem operasi. 
+
+\begin{itemize}
+	\item \textbf{PATH}:
+	\item \textbf{GOROOT}: 
+	\item \textbf{GOROOT\_FINAL}: 
+	\item \textbf{GOPATH}:
+	\item \textbf{GOOS}: 
+	\item \textbf{GOARCH}: 
+	\item \textbf{GOHOSTOS}: 
+	\item \textbf{GOHOSTARCH}: 
+	\item \textbf{GOBIN}: 
+	\item \textbf{GOARM}:
+	\item \textbf{GOEXE}:
+	\item \textbf{GOCHAR}:
+	\item \textbf{GOGCCFLAGS}:
+	\item \textbf{GOTOOLDIR}:
+	\item \textbf{CGO\_ENABLED}:
+\end{itemize}
+
+Tetapkan nilai-nilai variabel lingkungan tersebut di file inisialisasi shell (penulis menggunakan Bash, sehingga file-file inisialisasi diletakkan di \$HOME/.bashrc). Isikan baris-baris pada Listing~\ref{lst:bashrcGo} di .bashrc:
+
+\lstset{language=Go, caption=Konfigurasi variabel lingkungan, label={lst:bashrcGo}}
+\lstinputlisting{src/non-go/bab-01/go-en-var-bash.txt}
 
 \subsection{Menguji Instalasi Go}
 
