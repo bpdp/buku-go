@@ -35,9 +35,24 @@ Go tersedia pada berbagai platform. Proyek Go sendiri secara resmi mendukung pla
 
 \subsection{Menguji Instalasi Go}
 
-\lstset{language=Go, caption=hello.go}
+Kode sumber Go yang kita buat bisa dijalankan / dieksekusi tanpa harus dikompilasi (jadi seperti script Python atau Ruby) atau bisa juga dikompilasi lebih dulu untuk menghasilkan \textit{binary executable}\footnote{Catatan: selain ini sebenarnya ada paket pustaka yang dimaksudkan untuk digunakan dalam program, akan dibahas belakangan}. 
+
+Untuk menguji, buat program sederhana seperti pada Listing~\ref{lst:helloGo}. Setelah itu, gunakan ``go run namafile.go'' untuk menjalankan secara langsung atau dikompilasi lebih dulu dengan ``go build namafile.go'' seperti pada Listing~\ref{lst:ujiGo}.
+	
+\lstset{language=Go, caption=hello.go, label={lst:helloGo}}
 \lstinputlisting{src/go/bab-01/hello.go}
+
+\lstset{language=bash, caption={Menguji instalasi Go di Linux}, label={lst:ujiGo}}
+\lstinputlisting{src/non-go/bab-01/test-instalasi-go.txt}
 
 \section{Memahami Lingkungan Peranti Pengembang Go}
 
+Saat menginstall Go, kita akan memperoleh 3 buah file \textit{binary executable}:
+\begin{itemize}
+	\item \textbf{go}
+	\item \textbf{godoc}
+	\item \textbf{gofmt}
+\end{itemize}
+
+Penjelasan untuk masing-masing akan diuraikan di sub-sub bab berikut.
 

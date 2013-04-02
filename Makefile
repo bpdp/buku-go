@@ -11,3 +11,6 @@ clean-without-pdf:
 
 view:
 	epdfview pemrograman-go.pdf
+
+view-xpdf:
+	xpdf pemrograman-go.pdf
