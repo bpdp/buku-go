@@ -80,7 +80,23 @@ Untuk menguji, buat program sederhana seperti pada Listing~\ref{lst:helloGo}. Se
 \lstset{language=bash, caption={Menguji instalasi Go di Linux}, label={lst:ujiGo}}
 \lstinputlisting{src/non-go/bab-01/test-instalasi-go.txt}
 
-\section{Memahami Lingkungan Peranti Pengembang Go}
+\begin{mdframed}[style=catatan]
+\begin{verbatim}
+$ pwd
+/tmp/go-build084995351/command-line-arguments/_obj
+$ ls -la
+total 1528
+drwxr-xr-x 2 bpdp bpdp      80 Apr  5 08:55 .
+drwxr-xr-x 3 bpdp bpdp      60 Apr  5 08:55 ..
+-rwxr-xr-x 1 bpdp bpdp 1538790 Apr  5 08:55 a.out
+-rw-r--r-- 1 bpdp bpdp   24345 Apr  5 08:55 _go_.8
+$ file a.out 
+a.out: ELF 32-bit LSB  executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
+$
+\end{verbatim}
+\end{mdframed}
+
+\section{Memahami Lingkungan Peranti Pengembangan Go}
 
 Saat menginstall Go, kita akan memperoleh 3 buah file \textit{binary executable}:
 \begin{itemize}
@@ -107,11 +123,7 @@ Penjelasan untuk masing-masing akan diuraikan di sub-sub bab berikut.
 
 \subsection{gofmt}
 
-\textnf{gofmt} merupakan peranti untuk mem-format kode sumber dalam bahasa pemrograman Go yang kita buat.
+\textbf{gofmt} merupakan peranti untuk mem-format kode sumber dalam bahasa pemrograman Go yang kita buat.
 
 \lstset{language=bash, caption={Perintah \textbf{gofmt}}, label={lst:perintahGofmt}}
 \lstinputlisting{src/non-go/bab-01/perintah-gofmt.txt}
-
-
-
-

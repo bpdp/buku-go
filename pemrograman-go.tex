@@ -7,6 +7,8 @@
 \usepackage{pifont}
 \usepackage{makeidx}
 \usepackage{fancybox}
+\usepackage{verbatim}
+
 \makeindex
 
 \usepackage[usenames,dvipsnames]{color}
@@ -14,6 +16,14 @@
 \usepackage{wrapfig}
 \usepackage[pdftex]{graphicx}
 \usepackage{setspace}
+
+\usepackage[framemethod=default]{mdframed}
+\mdfdefinestyle{catatan}{%
+	rightline=true,innerleftmargin=10,innerrightmargin=10,
+	frametitlerule=true,frametitlerulecolor=green,
+	frametitlebackgroundcolor=gray,
+	frametitle={Catatan:},
+	frametitlerulewidth=2pt}
 
 \usepackage[Sonny]{fncychap}
 %\usepackage[Bjornstrup]{fncychap}
