@@ -10,7 +10,7 @@ Repo ini merupakan kode sumber dari buku bebas yang saya tulis tentang bahasa pe
 
 Buku ini saya buat dengan menggunakan [LaTeX](http://www.latex-project.org) pada platform [Linux](http://www.linux.org/). Paket yang saya gunakan untuk membuat buku ini adalah [koma-script](http://www.ctan.org/pkg/koma-script). LaTeX dan koma-script sudah terinstall secara otomatis jika anda menginstall TexLive di [Arch Linux](http://www.archlinux.org).
 
-Jika anda mempunyai LaTeX, koma-script, dan "make", ada 3 perintah yang sudah saya definisikan:
+Jika anda mempunyai LaTeX, koma-script, dan "make", ada 5 perintah yang sudah saya definisikan:
 * make: membuat file PDF
 * make clean-without-pdf: membersihkan berbagai file yang tidak diperlukan lagi (file PDF tetap tidak dihapus)
 * make clean-all: membersihkan semua file yang tidak diperlukan
