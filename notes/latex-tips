@@ -72,3 +72,12 @@ Catatan - box
 \shadowbox{\TheSbox}
 \end{center}
 
+Box catatan
+===========
+
+\begin{mdframed}[style=catatan]
+\begin{verbatim}
+...
+...
+\end{verbatim}
+\end{mdframed}
