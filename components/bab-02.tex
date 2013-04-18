@@ -66,11 +66,6 @@ $ git clone <masing-masing lokasi plugin>
 \end{verbatim}
 \end{mdframed}
 
-Kode sumber lengkap dari \$HOME/.vim/vimrc yang penulis gunakan bisa dilihat pada Listing~\ref{lst:vimrc} adalah sebagai berikut:
-
-\lstset{language=Bash, caption=\$HOME/.vim/vimrc, label={lst:vimrc}}
-\lstinputlisting{src/non-go/bab-02/vimrc.txt}
-
 Hasil dari menjalankan ``vim'' atau ``gvim'' melalui shell untuk menulis kode sumber Go bisa dilihat pada Gambar~\ref{fig:vim-go}
 
   \begin{figure}
@@ -79,6 +74,41 @@ Hasil dari menjalankan ``vim'' atau ``gvim'' melalui shell untuk menulis kode su
     \end{center}
     \caption{Tampilan gvim untuk mengedit kode sumber Go}
     \label{fig:vim-go}
+  \end{figure}
+
+
+\subsection{Autocompletion}
+
+Vim menyediakan fasilitas \textit{autocompletion} melalui \textit{Omniautocompletion}. Fasilitas ini sudah terinstall saat kita menginstall Vim. Untuk mengaktifkan fasilitas ini untuk keperluan Go, kita harus menginstall dan mengaktifkan Gocode (\url{https://github.com/nsf/gocode}). Sebaiknya kode sumber dari Gocode diambil semua karena ada script Vim yang akan kita gunakan:
+
+\begin{mdframed}[style=catatan]
+\begin{verbatim}
+$ git clone https://github.com/nsf/gocode.git
+Cloning into 'gocode'...
+remote: Counting objects: 2491, done.
+remote: Compressing objects: 100% (1128/1128), done.
+remote: Total 2491 (delta 1323), reused 2449 (delta 1295)
+Receiving objects: 100% (2491/2491), 1.07 MiB | 17 KiB/s, done.
+Resolving deltas: 100% (1323/1323), done.
+$
+\end{verbatim}
+\end{mdframed}
+
+Setelah itu, install Gocode menggunakan perintah \textbf{go get -u github.com/nsf/gocode}. Hasilnya adalah file \textit{executable binary} \textbf{\$GOROOT/bin/gocode}. Sebelum menggunakan Vim, aktifkan dulu gocode dengan mengeksekusi \textbf{gocode} melalui shell. Setelah itu, tambahkan satu baris di \textbf{\$HOME/.vim/vimrc}: \textbf{set ofu=syntaxcomplete\#Complete} di bawah baris \textbf{filetype plugin indent on}.
+
+Kode sumber lengkap dari \$HOME/.vim/vimrc yang penulis gunakan bisa dilihat pada Listing~\ref{lst:vimrc} adalah sebagai berikut:
+
+\lstset{language=Bash, caption=\$HOME/.vim/vimrc, label={lst:vimrc}}
+\lstinputlisting{src/non-go/bab-02/vimrc.txt}
+
+Untuk mengaktifkan completion, kita harus masuk ke mode \textit{Insert} dari Vim, setelah itu tekan \textbf{Ctrl-X, Ctrl-O} secara cepat. Hasil \textit{autocompletion} bisa dilihat di Gambar~\ref{fig:vim-go-completion}.
+
+  \begin{figure}
+    \begin{center}
+      \includegraphics[scale=0.5]{images/vim-go-completion.jpg}
+    \end{center}
+    \caption{Tampilan gvim untuk mengedit kode sumber Go}
+    \label{fig:vim-go-completion}
   \end{figure}
 
 \section{Menggunakan LiteIDE}
