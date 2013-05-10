@@ -111,14 +111,26 @@ Untuk mengaktifkan completion, kita harus masuk ke mode \textit{Insert} dari Vim
     \label{fig:vim-go-completion}
   \end{figure}
 
-\section{Menggunakan LiteIDE}
+\section{Menggunakan LiteIDE X}
 
-\subsection{Download dan Instalasi}
+LiteIDE X dibuat oleh visualfc dan tersedia dalam bentuk source code maupun binary. Source code bisa diperoleh di:
+\begin{itemize}
+  \item \url{http://code.google.com/p/liteide}
+  \item \url{https://github.com/visualfc/liteide}
+\end{itemize}
 
+Versi binary / installer bisa diperoleh di \url{https://code.google.com/p/golangide/downloads/list}. Jika akan men-download versi binary, ada 2 kategori yang bisa dipilih yaitu LiteIDE X dan LiteIDE X + WebKit. Jenis kedua diperlukan jika kita akan menggunakan HTML Viewer untuk LiteIDE X (biasanya diperlukan jika kita akan membuat aplikasi Web serta memerlukan editor untuk file-file Markdown (.md)).
 
-\subsection{Membuat Proyek}
+\subsection{Instalasi}
 
+Instalasi di Linux sangat mudah, hanya tinggal mengekstrak file yang kita download (saat ini versi terakhir adalah versi X18.1) pada suatu direktori dan jika ingin menjalankan cukup dengan mengeksekusi file \$LITEIDEX_HOME/bin/liteide (cd \$LITEIDEX_HOME/bin; ./liteide \&):
 
 \section{Software IDE Lain}
 
-Vim dan LiteIDE hanyalah beberapa peranti yang bisa digunakan oleh pengembang. Distribusi Go juga menyediakan dukungan untuk berbagai peranti lunak lain
+Vim dan LiteIDE hanyalah beberapa peranti yang bisa digunakan oleh pengembang. Distribusi Go juga menyediakan dukungan untuk berbagai peranti lunak lain:
+\begin{itemize}
+  \item \textbf{IntelliJ Idea}. Dukungan untuk Go diwujudkan dalam plugin yang dibuat oleh Mihai Claudiu Toader. Instalasi bisa dilakukan menggunakan menu untuk instalasi plugin dari dalam IntelliJ Idea. Kode sumber untuk plugin ini bisa diperoleh di \url{https://github.com/mtoader/google-go-lang-idea-plugin}
+  \item \textbf{Emacs}. Dukungan untuk Go diwujudkan dalam fasilitas \textit{add-on}. Untuk Emacs 24 ke atas, bisa diinstall melalui manajer paket (M-x package-list-packages), cari dan install \textbf{go-mode}. Emacs juga mendukung \textbf{gocode} untuk \textit{completion}.
+  \item \textbf{Eclipse}. Dukungan untuk Go diwujudkan melalui plugin \textit{goclipse}, bisa diperoleh di \url{https://code.google.com/p/goclipse/}.
+  \item Selain software-software yang telah disebutkan, rata-rata IDE / Editor sudah mempunyai dukungan terhadap bahasa pemrograman Go (JEdit, Sublime-text, Notepad++, dan lain-lain).
+\end{itemize}
