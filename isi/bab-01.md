@@ -28,104 +28,206 @@ Dengan dukungan tersebut, Proyek Go akan menerima laporan `bugs` terkait dengan 
 
 ### Download dan Install Go
 
-Meski mendukung banyak platform, di buku ini hanya akan dibahas penggunaan Go di platform Linux. Pada dasarnya peranti pengembang yang disediakan sama. Silahkan menyesuaikan dengan platform yang anda gunakan. Untuk instalasi berikut ini, ambil distribusi yang sesuai dengan platform di komputer anda. Untuk pembahasan ini, digunakan `go1.3.3.linux-386.tar.gz`. Setelah itu, ikuti langkah-langkah pada Listing~\ref{lst:installGo}.
+Meski mendukung banyak platform, di buku ini hanya akan dibahas penggunaan Go di platform Linux. Pada dasarnya peranti pengembang yang disediakan sama. Silahkan menyesuaikan dengan platform yang anda gunakan. Untuk instalasi berikut ini, ambil distribusi yang sesuai dengan platform di komputer anda. Untuk pembahasan ini, digunakan `go1.3.3.linux-386.tar.gz`. Setelah itu, ikuti langkah-langkah berikut:
 
-\lstset{language=Go, caption=Download dan install Go, label={lst:installGo}}
-\lstinputlisting{src/non-go/bab-01/download-install-go.txt}
-
-\subsection{Konfigurasi Variabel Lingkungan Sistem Operasi}
-
-Go menggunakan beberapa variabel lingkungan sistem operasi. 
-
-\begin{itemize}
-	\item \textbf{PATH}:
-	\item \textbf{GOROOT}: 
-	\item \textbf{GOROOT\_FINAL}: 
-	\item \textbf{GOPATH}:
-	\item \textbf{GOOS}: 
-	\item \textbf{GOARCH}: 
-	\item \textbf{GOHOSTOS}: 
-	\item \textbf{GOHOSTARCH}: 
-	\item \textbf{GOBIN}: 
-	\item \textbf{GOARM}:
-	\item \textbf{GOEXE}:
-	\item \textbf{GOCHAR}:
-	\item \textbf{GOGCCFLAGS}:
-	\item \textbf{GOTOOLDIR}:
-	\item \textbf{CGO\_ENABLED}:
-\end{itemize}
-
-Tetapkan nilai-nilai variabel lingkungan tersebut di file inisialisasi shell (penulis menggunakan Bash, sehingga file-file inisialisasi diletakkan di \$HOME/.bashrc). Isikan baris-baris pada Listing~\ref{lst:bashrcGo} di .bashrc:
-
-\lstset{language=Go, caption=Konfigurasi variabel lingkungan, label={lst:bashrcGo}}
-\lstinputlisting{src/non-go/bab-01/go-en-var-bash.txt}
-
-\subsection{Menguji Instalasi Go}
-
-Kode sumber Go yang kita buat bisa dijalankan / dieksekusi tanpa harus dikompilasi (jadi seperti script Python atau Ruby) atau bisa juga dikompilasi lebih dulu untuk menghasilkan \textit{binary executable}\footnote{Catatan: selain ini sebenarnya ada paket pustaka yang dimaksudkan untuk digunakan dalam program, akan dibahas belakangan}. 
-
-Untuk menguji, buat program sederhana seperti pada Listing~\ref{lst:helloGo}. Setelah itu, gunakan ``go run namafile.go'' untuk menjalankan secara langsung atau dikompilasi lebih dulu dengan ``go build namafile.go'' seperti pada Listing~\ref{lst:ujiGo}.
-	
-\lstset{language=Go, caption=hello.go, label={lst:helloGo}}
-\lstinputlisting{src/go/bab-01/hello.go}
-
-\lstset{language=bash, caption={Menguji instalasi Go di Linux}, label={lst:ujiGo}}
-\lstinputlisting{src/non-go/bab-01/test-instalasi-go.txt}
-
-\begin{mdframed}[style=catatan]
-\begin{verbatim}
+~~~bash
 $ pwd
-/tmp/go-build084995351/command-line-arguments/_obj
-$ ls -la
-total 1528
-drwxr-xr-x 2 bpdp bpdp      80 Apr  5 08:55 .
-drwxr-xr-x 3 bpdp bpdp      60 Apr  5 08:55 ..
--rwxr-xr-x 1 bpdp bpdp 1538790 Apr  5 08:55 a.out
--rw-r--r-- 1 bpdp bpdp   24345 Apr  5 08:55 _go_.8
-$ file a.out 
-a.out: ELF 32-bit LSB  executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
-$ cd /tmp
-$ tree go-build084995351/
-go-build084995351/
-|-- command-line-arguments
-|   \bigcap- _obj
-|       |-- a.out
-|       \bigcap- _go_.8
-\bigcap- command-line-arguments.a
+/home/bpdp/master/go
+16:05:18-bpdp@bpdp-arch:~/master/go$ ls
+total 43668
+drwxr-xr-x  7 bpdp bpdp     4096 Oct  3 16:34 .
+drwxr-xr-x 97 bpdp bpdp     4096 Dec  2 20:26 ..
+-rw-r-----  1 bpdp bpdp 44679774 Oct  3 16:27 go1.3.3.linux-386.tar.gz
+...
+...
+...
+$ cd ~/software/
+$ tar -xzvf ~/master/go/go1.0.3.linux-386.tar.gz
+~~~
 
-2 directories, 3 files
+Setelah menjalangkan langkah-langkah di atas, Go sudah terinstall di direktori `$HOME/software/go`
+
+### Konfigurasi Variabel Lingkungan Sistem Operasi
+
+Go menggunakan beberapa variabel lingkungan sistem operasi. Supaya berfungsi dengan baik, tetapkan nilai-nilai variabel lingkungan tersebut di file inisialisasi shell (penulis menggunakan Bash, sehingga file-file inisialisasi diletakkan di `$HOME/.bashrc`). Isikan baris-baris berikut di `$HOME/.bashrc`:
+
+~~~bash
+...
+...
+GO_HOME=$HOME/software/go
+
+export GOROOT=$GO_HOME
+export GOOS=linux 
+export GOARCH=386 
+export GOHOSTOS=linux 
+export GOHOSTARCH=386
+export GOBIN=$GOROOT/bin
+
+export PATH=$PATH:$GO_HOME/bin
+~~~
+
+Dengan memasukkan beberapa variabel lingkungan tersebut ke `.bashrc`, Go bisa digunakan. Untuk melihat hasil, login ke shell, setelah itu eksekusi perintah `go env`, hasilnya seharusnya adalah sebagai berikut:
+
+~~~bash
+$ go env
+GOARCH="386"
+GOBIN="/home/bpdp/software/go/bin"
+GOCHAR="8"
+GOEXE=""
+GOHOSTARCH="386"
+GOHOSTOS="linux"
+GOOS="linux"
+GOPATH=""
+GORACE=""
+GOROOT="/home/bpdp/software/go"
+GOTOOLDIR="/home/bpdp/software/go/pkg/tool/linux_386"
+CC="gcc"
+GOGCCFLAGS="-fPIC -m32 -pthread -fmessage-length=0"
+CXX="g++"
+CGO_ENABLED="1"
 $
-\end{verbatim}
-\end{mdframed}
+~~~
 
-\section{Memahami Lingkungan Peranti Pengembangan Go}
+### Menguji Instalasi Go
 
-Saat menginstall Go, kita akan memperoleh 3 buah file \textit{binary executable}:
-\begin{itemize}
-	\item \textbf{go}
-	\item \textbf{godoc}
-	\item \textbf{gofmt}
-\end{itemize}
+Kode sumber Go yang kita buat bisa dijalankan / dieksekusi tanpa harus dikompilasi (jadi seperti script Python atau Ruby) atau bisa juga dikompilasi lebih dulu untuk menghasilkan `binary executable`. Selain menghasilkan `binary executable`, sebenarnya ada paket pustaka yang dimaksudkan untuk digunakan dalam program (disebut sebagai `package`). Package akan dibahas lebih lanjut pada bab-bab berikutnya.
+
+Untuk menguji, buat program sederhana seperti listing `hello.go`. Setelah itu, gunakan `go run namafile.go` untuk menjalankan secara langsung atau dikompilasi lebih dulu dengan `go build namafile.go`.
+
+~~~go
+// hello.go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Printf("hello, world\n")
+}
+~~~
+	
+Berikut ini adalah langkah-langkah untuk mengeksekusi `hello.go`:
+
+~~~bash
+$ ls
+total 12
+drwxr-xr-x 2 bpdp bpdp 4096 Apr  2  2013 .
+drwxr-xr-x 4 bpdp bpdp 4096 Apr  9  2013 ..
+-rw-r--r-- 1 bpdp bpdp   74 Mar 30  2013 hello.go
+$ go run hello.go 
+hello, world
+$ go build hello.go 
+$ ls -la
+total 1456
+drwxr-xr-x 2 bpdp bpdp    4096 Dec  6 16:31 .
+drwxr-xr-x 4 bpdp bpdp    4096 Apr  9  2013 ..
+-rwxr-xr-x 1 bpdp bpdp 1476376 Dec  6 16:31 hello
+-rw-r--r-- 1 bpdp bpdp      74 Mar 30  2013 hello.go
+$ ./hello 
+hello, world
+$ file hello
+hello: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
+$
+~~~
+
+## Memahami Lingkungan Peranti Pengembangan Go
+
+Saat menginstall Go, kita akan memperoleh 4 buah file `binary executable`:
+
+* go
+* godoc
+* gofmt
+* gocode
 
 Penjelasan untuk masing-masing akan diuraikan di sub-sub bab berikut.
 
-\subsection{go}
+### go
 
-\textbf{go} merupakan peranti untuk mengelola kode sumber Go yang kita buat. Beberapa argumen dari \textbf{go} adalah:
+`go` merupakan peranti untuk mengelola kode sumber Go yang kita buat. Beberapa argumen dari `go` adalah:
 
-\lstset{language=bash, caption={Perintah \textbf{go}}, label={lst:perintahGo}}
-\lstinputlisting{src/non-go/bab-01/perintah-go.txt}
+~~~bash
+$ go
+Go is a tool for managing Go source code.
 
-\subsection{godoc}
+Usage:
 
-\textbf{godoc} merupakan peranti untuk menampilkan dokumentasi paket pustaka standar Go atau menampilkan server untuk dokumentasi Go (mirip seperti yang terdapat pada \url{http://golang.org}).
+	go command [arguments]
 
-\lstset{language=bash, caption={Perintah \textbf{godoc}}, label={lst:perintahGodoc}}
-\lstinputlisting{src/non-go/bab-01/perintah-godoc.txt}
+The commands are:
 
-\subsection{gofmt}
+    build       compile packages and dependencies
+    clean       remove object files
+    env         print Go environment information
+    fix         run go tool fix on packages
+    fmt         run gofmt on package sources
+    get         download and install packages and dependencies
+    install     compile and install packages and dependencies
+    list        list packages
+    run         compile and run Go program
+    test        test packages
+    tool        run specified go tool
+    version     print Go version
+    vet         run go tool vet on packages
 
-\textbf{gofmt} merupakan peranti untuk mem-format kode sumber dalam bahasa pemrograman Go yang kita buat.
+Use "go help [command]" for more information about a command.
 
-\lstset{language=bash, caption={Perintah \textbf{gofmt}}, label={lst:perintahGofmt}}
-\lstinputlisting{src/non-go/bab-01/perintah-gofmt.txt}
+Additional help topics:
+
+    c           calling between Go and C
+    filetype    file types
+    gopath      GOPATH environment variable
+    importpath  import path syntax
+    packages    description of package lists
+    testflag    description of testing flags
+    testfunc    description of testing functions
+
+Use "go help [topic]" for more information about that topic.
+~~~
+
+### godoc
+
+`godoc` merupakan peranti untuk menampilkan dokumentasi paket pustaka standar Go atau menampilkan server untuk dokumentasi Go (mirip seperti yang terdapat pada [website dokumentasi Go](http://golang.org/doc/).
+
+~~~bash
+$ godoc 
+usage: godoc package [name ...]
+	godoc -http=:6060
+  -analysis="": comma-separated list of analyses to perform (supported: type, pointer). See http://golang.org/lib/godoc/analysis/help.html
+  -ex=false: show examples in command line mode
+  -goroot="/home/bpdp/software/go": Go root directory
+  -html=false: print HTML in command-line mode
+  -http="": HTTP service address (e.g., ':6060')
+  -httptest.serve="": if non-empty, httptest.NewServer serves on this address and blocks
+  -index=false: enable search index
+  -index_files="": glob pattern specifying index files;if not empty, the index is read from these files in sorted order
+  -index_throttle=0.75: index throttle value; 0.0 = no time allocated, 1.0 = full throttle
+  -links=true: link identifiers to their declarations
+  -maxresults=10000: maximum number of full text search results shown
+  -notes="BUG": regular expression matching note markers to show
+  -play=false: enable playground in web interface
+  -q=false: arguments are considered search queries
+  -server="": webserver address for command line searches
+  -src=false: print (exported) source in command-line mode
+  -tabwidth=4: tab width
+  -templates="": directory containing alternate template files
+  -timestamps=false: show timestamps with directory listings
+  -url="": print HTML for named URL
+  -v=false: verbose mode
+  -write_index=false: write index to a file; the file name must be specified with -index_files
+  -zip="": zip file providing the file system to serve; disabled if empty
+~~~
+
+### gofmt
+
+`gofmt` merupakan peranti untuk mem-format kode sumber dalam bahasa pemrograman Go.
+
+~~~bash
+$ gofmt --help
+usage: gofmt [flags] [path ...]
+  -cpuprofile="": write cpu profile to this file
+  -d=false: display diffs instead of rewriting files
+  -e=false: report all errors (not just the first 10 on different lines)
+  -l=false: list files whose formatting differs from gofmt's
+  -r="": rewrite rule (e.g., 'a[b:len(a)] -> a[b:]')
+  -s=false: simplify code
+  -w=false: write result to (source) file instead of stdout
+~~~
