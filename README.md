@@ -1,4 +1,4 @@
-![Go Programming Language](images/Go-Google-programming-language.jpg)
+![Gopher](images/gopher.png)
 
 [Mulai Membaca Buku](isi/README.md)
 
@@ -34,3 +34,13 @@ Saya bisa dihubungi melalui:
 # Change Logs
 
 Catatan-catatan perubahan pada buku ini bisa dilihat di [riwayat perubahan](Changelogs.md)
+
+# Tentang Maskot Go
+
+Maskot Go pada repo ini dibuat oleh Renee French. Berikut adalah README tentang maskot Go (Gopher) ini:
+
+~~~
+The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
+The design is licensed under the Creative Commons 3.0 Attributions license.
+Read this article for more details: http://blog.golang.org/gopher
+~~~
