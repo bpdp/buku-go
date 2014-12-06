@@ -1,10 +1,10 @@
 # IDE Untuk Go
 
+[[ Daftar Isi ]](README.md) [[ Awal ]](../README.md)
+
 IDE (`Integrated Development Environment`) merupakan software yang digunakan oleh pemrogram dan pengembang software untuk membangun software. IDE berisi berbagai fasilitas komprehensif yang diperlukan para pemrogram untuk membantu mereka dalam membangun software aplikasi. Secara minimal, biasanya IDE terdiri atas editor teks (untuk mengetikkan kode sumber), debugger (pencari bugs), `syntax highlighting, code completion, serta dokumentasi / help. Bab ini akan membahas beberapa software yang bisa digunakan. Sebenarnya menggunakan editor teks yang menghasilkan file text / ASCII murni sudah cukup untuk bisa menuliskan kode sumber dan kemudian mengkompilkasi. Pada bab ini akan dibahas [Vim](http://www.vim.org) sebagai editor teks dan LiteIDE sebagai software IDE yang lebih lengkap untuk Go, tidak sekedar hanya untuk menuliskan kode sumber.
 
 ## Menggunakan Vim
-
-[[ Daftar Isi ]](README.md) [[ Awal ]](../README.md)
 
 Untuk menggunakan Vim, ada plugin utama serta berbagai plugin pendukung yang bisa digunakan. Sebaiknya, menggunakan `pathogen` untuk mempermudah pengelolaan berbagai plugin tersebut. Bagian ini akan menjelaskan berbagai konfigurasi serta instalasi yang diperlukan sehingga Vim bisa menjadi peranti untuk pengembangan aplikasi menggunakan Go.
 
@@ -119,9 +119,9 @@ set grepprg=grep\ -nH\ $*
 
 Untuk mengaktifkan completion, kita harus masuk ke mode `Insert` dari Vim, setelah itu tekan `Ctrl-X, Ctrl-O` secara cepat. Hasil `autocompletion` bisa dilihat di gambar berikut ini:
 
-[Go completion](../images/vim-go-completion.jpg)
+![Go completion](../images/vim-go-completion.jpg)
 
-## section{Menggunakan LiteIDE)
+## Menggunakan LiteIDE
 
 LiteIDE dibuat oleh visualfc dan tersedia dalam bentuk kode sumber maupun binary. Kode sumber bisa diperoleh di [repo Google](https://github.com/visualfc/liteide). Installer executable bisa diperoleh di [Sourceforge](http://sourceforge.net/projects/liteide/files)
 
