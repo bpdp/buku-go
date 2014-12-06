@@ -1,5 +1,7 @@
 # Pengenalan Go
 
+[[ Daftar Isi ]](README.md) [[ Awal ]](../README.md)
+
 ## Apa itu Go?
 
 Go adalah nama bahasa pemrograman sekaligus nama implementasi dalam bentuk kompilator (`compiler`). Untuk pembahasan berikutnya, istilah `Go` akan mengacu juga pada spesifikasi bahasa pemrograman serta peranti pengembangannya.
@@ -231,3 +233,5 @@ usage: gofmt [flags] [path ...]
   -s=false: simplify code
   -w=false: write result to (source) file instead of stdout
 ~~~
+
+[[ Daftar Isi ]](README.md) [[ Awal ]](../README.md)
