@@ -1,34 +1,32 @@
-Status
-======
+![Go Programming Language](images/Go-Google-programming-language.jpg)
 
-+ 28 Maret 2013 - penulisan buku dimulai.
+[Mulai Membaca Buku](isi/README.md)
 
-Selamat datang!
-===============
+Repo ini merupakan kode sumber dari buku bebas yang saya tulis tentang [bahasa pemrograman Go](http://golang.org). Lisensi untuk buku ini adalah [CC-BY-SA](http://freedomdefined.org/Licenses/CC-BY-SA) pada buku ini untuk mempromosikan kultur kebebasan berkarya yang positif dan meningkatkan aksesibilitas informasi / pengetahuan bagi rakyat Indonesia. 
 
-Repo ini merupakan kode sumber dari buku bebas yang saya tulis tentang bahasa pemrograman Go. Lisensi untuk buku ini adalah [CC-BY-SA](http://freedomdefined.org/Licenses/CC-BY-SA) pada buku ini untuk mempromosikan kultur kebebasan berkarya yang positif dan meningkatkan aksesibilitas informasi / pengetahuan bagi rakyat Indonesia. 
+Pada awalnya, buku bebas ini merupakan buku yang dirancang untuk keperluan memberikan pengetahuan mendasar pengembangan aplikasi menggunakan Go, tetapi dalam perkembangan berikutnya, saya berpikir akan lebih baik jika membahas berbagai aspek penggunaan Go untuk membangun aplikasi di industri software. Untuk mengikuti materi yang ada pada buku ini, pembaca diharapkan menyiapkan peranti komputer dengan beberapa software berikut terpasang:
+* Sistem operasi Linux (distribusi apa saja, lihat di (Distrowatch)[http://www.distrowatch.com]. Semua software yang digunakan di buku ini sebenarnya juga bisa dijalankan pada sistem operasi lain (Windows dan MacOSX), tetapi jika ingin menggunakan selain Linux, silahkan membuat penyesuaian-penyesuaian sendiri.
+* Compiler Go
+* [Git](http://git-scm.com) untuk `version control system`
+* [MongoDB](http://www.mongodb.org) untuk basis data NOSQL
+* [Vim](http://www.vim.org) untuk mengedit source code.
+* [LiteIDE](https://github.com/visualfc/liteide), software IDE untuk Go.
 
-Buku ini saya buat dengan menggunakan [LaTeX](http://www.latex-project.org) pada platform [Linux](http://www.linux.org/). Paket yang saya gunakan untuk membuat buku ini adalah [koma-script](http://www.ctan.org/pkg/koma-script). LaTeX dan koma-script sudah terinstall secara otomatis jika anda menginstall TexLive di [Arch Linux](http://www.archlinux.org).
+Materi akan lebih banyak berorientasi ke command line / shell sehingga para pembaca sebaiknya sudah memahami cara-cara menggunakan shell di Linux.
 
-Jika anda mempunyai LaTeX, koma-script, dan "make", ada 4 perintah yang sudah saya definisikan:
-* make: membuat file PDF
-* make clean-without-pdf: membersihkan berbagai file yang tidak diperlukan lagi (file PDF tetap tidak dihapus)
-* make clean-all: membersihkan semua file yang tidak diperlukan
-* make view: menampilkan file PDF hasil proses menggunakan **xpdf** (jika anda menggunakan PDF viewer lain, misalnya Adobe Acrobat Reader, evince, dll, silahkan diganti isi **Makefile** sesuai dengan nama command-line executable-nya).
+# Versi Software
 
-Versi PDF
-=========
+Go 1.3.3, Git 2.1.3, MongoDB 2.6.5, Vim 7.4, LiteIDE X25
 
-Versi PDF dari buku ini akan saya beritahukan jika sudah cukup memenehi syarat sebagai buku yang bisa dipelajari.
-
-Penulis
-=======
+# Penulis
 
 Buku ini ditulis oleh Bambang Purnomosidi D. P. Info tentang saya bisa diperoleh di [situs pribadi saya](http://bpdp.name). Saat ini saya menjadi dosen di [STMIK AKAKOM](http://www.akakom.ac.id) dan kandidat doktor di [Jurusan Teknik Elektro dan Teknologi Informasi - JTETI, UGM](http://pasca.te.ugm.ac.id).
 
 Saya bisa dihubungi melalui:
 
-* **Twitter:** [@bpdp](http://twitter.com/#!/bpdp)
+* **Twitter:** [@bpdp](http://twitter.com/bpdp)
 * **Facebook:** [/bambangpdp](http://www.facebook.com/bambangpdp)
 
-[<img src="http://creativecommons.or.id/wp-content/uploads/2012/07/cc-by-sa.jpg">](http://wiki.creativecommons.org/Licenses/by-sa/3.0LegalText_(Indonesian\))
+![Lisensi](http://creativecommons.or.id/wp-content/uploads/2012/07/cc-by-sa.jpg). [Lisensi versi bahasa Indonesia](http://wiki.creativecommons.org/Licenses/by-sa/3.0LegalText_(Indonesian\))
+
+[Riwayat perubahan](Changelogs.md)
