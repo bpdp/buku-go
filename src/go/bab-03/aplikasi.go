@@ -1,6 +1,6 @@
 /*
 	aplikasi.go
-	
+
 	Contoh program sederhana untuk menjelaskan
 	struktur program Go untuk aplikasi executable
 
@@ -28,12 +28,12 @@ import (
 func main() {
 
 	// ini adalah kode sumber / program Go
-	// akan dijelaskan lebih lanjut, no need to
-	// care a lot right now.
+	// akan dijelaskan lebih lanjut, abaikan
+	// jika belum paham
 	var (
-		user string
+		user    string
 		homeDir string
-		goHome string
+		goHome  string
 	)
 
 	user = os.Getenv("USER")
