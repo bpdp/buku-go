@@ -5,7 +5,7 @@ Buku ini akan dibagi menjadi beberapa bagian:
 * Dasar-dasar Pemrograman `Go`: Sintaksis, Semantik, dan Pustaka Standar
 * Pengembangan Aplikasi
 * Penutup
-Berikut ini akan diuraikan masing-masing bagian serta bab-bab yang dibahas oleh masing-masing bagian tersebut.
+Berikut ini akan diuraikan masing-masing bagian serta bab-bab yang dibahas oleh masing-masing bagian tersebut. **Kode sumber** / `source code` yang ada pada buku ini terdapat pada [direktori src](../src).
 
 # Pengenalan
 
@@ -14,7 +14,7 @@ Pada bagian ini, akan dibahas instalasi peranti pengembangan bahasa pemrograman 
 * [Bab 1: Pengenalan Go](bab-01.md)
 * [Bab 2: IDE untuk Go](bab-02.md)
 
-# Dasar Pemrograman `Go`: Sintaksis dan Semantik
+# Dasar Pemrograman `Go`: Sintaksis, Semantik, dan Pustaka Standar
 
 Bagian ini membahas tentang komponen dasar dan inti dari bahasa pemrograman Go. Semua pembahasan pada bagian ini terdapat pada instalasi standar peranti pengembangan Go.
 
