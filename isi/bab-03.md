@@ -19,7 +19,7 @@ Suatu aplikasi `executable` (artinya bisa dijalankan secara langsung oleh sistem
 
 */
 
-// Program Go diawali dengan nama pake.
+// Program Go diawali dengan nama paket.
 // Paket untuk aplikasi executable selalu berada
 // pada paket main.
 package main
@@ -58,6 +58,37 @@ func main() {
 
 }
 ~~~
+
+Untuk menjalankan kode sumber di atas, ikuti langkah-langkah berikut:
+
+### Tanpa Proses Kompilasi
+
+~~~bash
+$ go run aplikasi.go 
+Halo bpdp
+Home anda di /home/bpdp
+Anda menggunakan Go di /home/bpdp/software/go-dev-tools/go/go1.4.1
+~~~
+
+### Mengkompilasi Menjadi *Binary Executable*
+
+~~~bash
+go build aplikasi.go 
+$ ls -la
+total 1544
+drwxr-xr-x 2 bpdp bpdp    4096 Jan 20 15:35 .
+drwxr-xr-x 5 bpdp bpdp    4096 Dec 24 20:18 ..
+-rwxr-xr-x 1 bpdp bpdp 1564752 Jan 20 15:35 aplikasi
+-rw-r--r-- 1 bpdp bpdp     900 Dec 10 11:32 aplikasi.go
+$ ./aplikasi 
+Halo bpdp
+Home anda di /home/bpdp
+Anda menggunakan Go di /home/bpdp/software/go-dev-tools/go/go1.4.1
+$ file aplikasi
+aplikasi: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
+$
+~~~
+
 
 ## Pustaka / Package
 

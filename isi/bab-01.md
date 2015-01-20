@@ -138,7 +138,6 @@ Saat menginstall Go, kita akan memperoleh 4 buah file `binary executable`:
 * go
 * godoc
 * gofmt
-* gocode
 
 Penjelasan untuk masing-masing akan diuraikan di sub-sub bab berikut.
 
@@ -232,6 +231,35 @@ usage: gofmt [flags] [path ...]
   -r="": rewrite rule (e.g., 'a[b:len(a)] -> a[b:]')
   -s=false: simplify code
   -w=false: write result to (source) file instead of stdout
+~~~
+
+Untuk melihat bagaimana `gofmt` bisa digunakan untuk membantu memformat kode sumber, buat kode sumber sederhana berikut ini:
+
+~~~go
+// hello-unformatted.go
+package main
+import "fmt"
+func main() {
+fmt.Printf("hello, world\n")
+}
+~~~
+
+Format file kode sumber di atas sebagai berikut:
+
+~~~bash
+$ gofmt hello-unformatted.go > hello-formatted.go
+~~~
+
+Hasilnya adalah sebagai berikut:
+
+~~~go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Printf("hello, world\n")
+}
 ~~~
 
 [[ Daftar Isi ]](README.md) [[ Awal ]](../README.md)
