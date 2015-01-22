@@ -237,10 +237,12 @@ Untuk melihat bagaimana `gofmt` bisa digunakan untuk membantu memformat kode sum
 
 ~~~go
 // hello-unformatted.go
+$ cat hello-unformatted.go 
 package main
 import "fmt"
 func main() {
-fmt.Printf("hello, world\n")
+	fmt.Printf("halo\n") // menampilkan tulisan
+	   fmt.Printf("dunia")	// ini tulisan baris kedua
 }
 ~~~
 
@@ -253,12 +255,14 @@ $ gofmt hello-unformatted.go > hello-formatted.go
 Hasilnya adalah sebagai berikut:
 
 ~~~go
+$ cat hello-formatted.go 
 package main
 
 import "fmt"
 
 func main() {
-	fmt.Printf("hello, world\n")
+		fmt.Printf("halo\n") // menampilkan tulisan
+		fmt.Printf("dunia")  // ini tulisan baris kedua
 }
 ~~~
 
