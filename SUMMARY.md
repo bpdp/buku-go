@@ -1,4 +1,4 @@
-# SUMMARY
+# Daftar Isi Singkat
 
 ## Pengantar
 
