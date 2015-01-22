@@ -1,4 +1,0 @@
-# Summary
-
-* [Pengantar](README.md)
-
