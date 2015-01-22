@@ -2,7 +2,7 @@
 
 ![Gopher](images/gopher.png)
 
-[ [Daftar Isi Lengkap ](isi/README.md) ] [ [Daftar Isi Singkat ](SUMMARY.md) ]
+[ [Daftar Isi Lengkap ](isi/README.md) ]
 
 Repo ini merupakan kode sumber dari buku bebas yang saya tulis tentang [bahasa pemrograman Go](http://golang.org). Lisensi yang saya berikan untuk buku ini adalah [CC-BY-SA](http://freedomdefined.org/Licenses/CC-BY-SA) dengan tujuan untuk mempromosikan kultur kebebasan berkarya yang positif dan meningkatkan aksesibilitas informasi / pengetahuan bagi rakyat Indonesia. 
 
@@ -18,7 +18,7 @@ Materi akan lebih banyak berorientasi ke command line / shell sehingga para pemb
 
 # Versi Software
 
-Go 1.3.3, Git 2.1.3, MongoDB 2.6.5, Vim 7.4, LiteIDE X25. Versi selain yang tertulis disini mungkin bisa digunakan.
+Go 1.4.1, Git 2.2.2, MongoDB 2.6.6, Vim 7.4, LiteIDE X26. Versi selain yang tertulis disini mungkin bisa digunakan.
 
 # Penulis
 
