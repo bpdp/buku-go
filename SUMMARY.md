@@ -1,5 +1,5 @@
 # Summary
 
 * [Pengantar](README.md)
-   * Daftar Isi Lengkap
+   * [Daftar Isi Lengkap](isi/README.md)
 
