@@ -237,7 +237,6 @@ Untuk melihat bagaimana `gofmt` bisa digunakan untuk membantu memformat kode sum
 
 ~~~go
 // hello-unformatted.go
-$ cat hello-unformatted.go 
 package main
 import "fmt"
 func main() {
@@ -255,7 +254,7 @@ $ gofmt hello-unformatted.go > hello-formatted.go
 Hasilnya adalah sebagai berikut:
 
 ~~~go
-$ cat hello-formatted.go 
+// hello-formatted.go 
 package main
 
 import "fmt"
