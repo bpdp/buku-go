@@ -1,8 +1,8 @@
-# Pemrograman Go
+# Pengembangan Aplikasi Menggunakan Bahasa Pemrograman Go
 
 ![Gopher](images/gopher.png)
 
-[Mulai Membaca Buku](isi/README.md)
+[ [Mulai Membaca Buku](isi/README.md) ] [ [Daftar Isi](SUMMARY.md) ]
 
 Repo ini merupakan kode sumber dari buku bebas yang saya tulis tentang [bahasa pemrograman Go](http://golang.org). Lisensi yang saya berikan untuk buku ini adalah [CC-BY-SA](http://freedomdefined.org/Licenses/CC-BY-SA) dengan tujuan untuk mempromosikan kultur kebebasan berkarya yang positif dan meningkatkan aksesibilitas informasi / pengetahuan bagi rakyat Indonesia. 
 
