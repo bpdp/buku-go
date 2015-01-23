@@ -123,9 +123,12 @@ Untuk mengaktifkan completion, kita harus masuk ke mode `Insert` dari Vim, setel
 
 ## Menggunakan LiteIDE
 
-LiteIDE dibuat oleh visualfc dan tersedia dalam bentuk kode sumber maupun binary. Kode sumber bisa diperoleh di [repo Google](https://github.com/visualfc/liteide). Installer executable bisa diperoleh di [Sourceforge](http://sourceforge.net/projects/liteide/files)
+![LiteIDE](../images/liteIde
 
-Instalasi di Linux sangat mudah, hanya tinggal mengekstrak file yang kita download (saat ini versi terakhir adalah versi X25) pada suatu direktori dan jika ingin menjalankan cukup dengan mengeksekusi file `$LITEIDE_HOME/bin/liteide` (`cd $LITEIDE_HOME/bin; ./liteide &`)
+
+LiteIDE dibuat oleh visualfc dan tersedia dalam bentuk kode sumber maupun binary. Kode sumber bisa diperoleh di [repo GitHub](https://github.com/visualfc/liteide). Installer executable bisa diperoleh di [Sourceforge](http://sourceforge.net/projects/liteide/files)
+
+Instalasi di Linux sangat mudah, hanya tinggal mengekstrak file yang kita download pada suatu direktori dan jika ingin menjalankan cukup dengan mengeksekusi file `$LITEIDE_HOME/bin/liteide` (`cd $LITEIDE_HOME/bin; ./liteide &`)
 
 ## Software IDE Lain
 

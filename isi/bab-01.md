@@ -30,24 +30,33 @@ Dengan dukungan tersebut, Proyek Go akan menerima laporan `bugs` terkait dengan 
 
 ### Download dan Install Go
 
-Meski mendukung banyak platform, di buku ini hanya akan dibahas penggunaan Go di platform Linux. Pada dasarnya peranti pengembang yang disediakan sama. Silahkan menyesuaikan dengan platform yang anda gunakan. Untuk instalasi berikut ini, ambil distribusi yang sesuai dengan platform di komputer anda. Untuk pembahasan ini, digunakan `go1.3.3.linux-386.tar.gz`. Setelah itu, ikuti langkah-langkah berikut:
+~~~
+Catatan:
+
+Go akan diinstall di direktori $HOME/software/go-dev-tools/go/goVERSI
+
+VERSI = versi dari Go yang akan diinstall, misalnya go1.4.1
+Lokasi instalasi tersebut saya gunakan karena saya mempunyai lebih dari 1 versi Go, jika nanti ada versi lainnya, versi lain tersebut akan saya install (misal versi 1.5) di $HOME/software/go-dev-tools/go/go1.5
+~~~
+
+Meski mendukung banyak platform, di buku ini hanya akan dibahas penggunaan Go di platform Linux. Pada dasarnya peranti pengembang yang disediakan sama. Silahkan menyesuaikan dengan platform yang anda gunakan. Untuk instalasi berikut ini, ambil distribusi yang sesuai dengan platform di komputer anda. Untuk pembahasan ini, digunakan `go1.4.1.linux-386.tar.gz`. Setelah itu, ikuti langkah-langkah berikut:
 
 ~~~bash
 $ pwd
 /home/bpdp/master/go
-16:05:18-bpdp@bpdp-arch:~/master/go$ ls
-total 43668
-drwxr-xr-x  7 bpdp bpdp     4096 Oct  3 16:34 .
-drwxr-xr-x 97 bpdp bpdp     4096 Dec  2 20:26 ..
--rw-r-----  1 bpdp bpdp 44679774 Oct  3 16:27 go1.3.3.linux-386.tar.gz
+$ ls
+total 51144
+drwxr-xr-x  12 bpdp bpdp     4096 Jan 16 09:12 .
+drwxr-xr-x 100 bpdp bpdp     4096 Jan 20 09:02 ..
+-rw-r--r--   1 bpdp bpdp 52313284 Jan 16 07:41 go1.4.1.linux-386.tar.gz
 ...
 ...
-...
-$ cd ~/software/
-$ tar -xzvf ~/master/go/go1.0.3.linux-386.tar.gz
+$ mkdir ~/software/go-dev-tools/
+$ cd ~/software/go-dev-tools
+$ tar -xzvf ~/master/go/go1.4.1.linux-386.tar.gz
 ~~~
 
-Setelah menjalangkan langkah-langkah di atas, Go sudah terinstall di direktori `$HOME/software/go`
+Setelah menjalankan langkah-langkah di atas, Go sudah terinstall di direktori `$HOME/software/go-dev-tools/go`
 
 ### Konfigurasi Variabel Lingkungan Sistem Operasi
 
@@ -73,7 +82,7 @@ Dengan memasukkan beberapa variabel lingkungan tersebut ke `.bashrc`, Go bisa di
 ~~~bash
 $ go env
 GOARCH="386"
-GOBIN="/home/bpdp/software/go/bin"
+GOBIN="/home/bpdp/software/go-dev-tools/go/bin"
 GOCHAR="8"
 GOEXE=""
 GOHOSTARCH="386"
@@ -82,7 +91,7 @@ GOOS="linux"
 GOPATH=""
 GORACE=""
 GOROOT="/home/bpdp/software/go"
-GOTOOLDIR="/home/bpdp/software/go/pkg/tool/linux_386"
+GOTOOLDIR="/home/bpdp/software/go-dev-tools/go/pkg/tool/linux_386"
 CC="gcc"
 GOGCCFLAGS="-fPIC -m32 -pthread -fmessage-length=0"
 CXX="g++"
@@ -160,6 +169,7 @@ The commands are:
     env         print Go environment information
     fix         run go tool fix on packages
     fmt         run gofmt on package sources
+    generate    generate Go files by processing source
     get         download and install packages and dependencies
     install     compile and install packages and dependencies
     list        list packages
@@ -194,7 +204,7 @@ usage: godoc package [name ...]
 	godoc -http=:6060
   -analysis="": comma-separated list of analyses to perform (supported: type, pointer). See http://golang.org/lib/godoc/analysis/help.html
   -ex=false: show examples in command line mode
-  -goroot="/home/bpdp/software/go": Go root directory
+  -goroot="/home/bpdp/software/go-dev-tools/go/go1.4.1": Go root directory
   -html=false: print HTML in command-line mode
   -http="": HTTP service address (e.g., ':6060')
   -httptest.serve="": if non-empty, httptest.NewServer serves on this address and blocks
