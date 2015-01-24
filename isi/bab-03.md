@@ -97,6 +97,9 @@ $
 
 ### Angka / Numerik
 
+Untuk tipe numerik, pada dasarnya kita bisa menggunakan bilangan bulat (*integer*) dan bilangan pecahan (*floating-point*). Bilangan bulat terdiri atas bilangan bertanda (*signed* - int) dan bilangan tak-bertanda (*unsigned* - uint). Berikut ini adalah daftar lengkap dari tipe data numerik tersebut:
+
+
 |  Tipe     | Arti | Jangkauan |
 |-----------|------|-----------|
 | uint8     | unsigned  8-bit integer | 0 sampai  255 |
@@ -118,6 +121,13 @@ $
 | byte | alias dari uint8 |  |
 | rune | alias dari int32 |  |
 
+Selain definisi di atas, Go juga mempunyai alias penyebutan yang implementasinya tergantung pada arsitektur komputer yang digunakan:
+
+| Tipe | Arti |
+|------|------|
+| uint | arsitektur 32 atau 64 bit |
+| int  | mempunyai ukuran yang sama dengan uint |
+| uintptr | bilangan bulat tak bertanda untuk menyimpan nilai pointer |
 
 ### String
 
@@ -126,6 +136,100 @@ $
 ## Variabel dan Konstanta
 
 ### Variabel
+
+
+```go
+// nilai-default-variabel.go
+package main
+
+import "fmt"
+
+func main() {
+
+	// unsigned-integer
+	var defUint8 uint8
+	var defUint16 uint16
+	var defUint32 uint32
+	var defUint64 uint64
+	var defUint uint
+
+	// signed-integer
+	var defInt8 int8
+	var defInt16 int16
+	var defInt32 int32
+	var defInt64 int64
+	var defInt int
+
+	// string
+	var defString string
+
+	// floating-point
+	var defFloat32 float32
+	var defFloat64 float64
+
+	// complex
+	var defComplex64 complex64
+	var defComplex128 complex128
+
+	// alias
+	var defByte byte
+	var defRune rune
+
+	fmt.Println("\nNilai default untuk uint8 = ", defUint8)
+	fmt.Println("Nilai default untuk uint16 = ", defUint16)
+	fmt.Println("Nilai default untuk uint32 = ", defUint32)
+	fmt.Println("Nilai default untuk uint64 = ", defUint64)
+	fmt.Println("Nilai default untuk uint = ", defUint)
+
+	fmt.Println("\nNilai default untuk int8 = ", defInt8)
+	fmt.Println("Nilai default untuk int16 = ", defInt16)
+	fmt.Println("Nilai default untuk int32 = ", defInt32)
+	fmt.Println("Nilai default untuk int63 = ", defInt64)
+	fmt.Println("Nilai default untuk int = ", defInt)
+
+	fmt.Println("\nNilai default untuk string = ", defString)
+
+	fmt.Println("\nNilai default untuk float32 = ", defFloat32)
+	fmt.Println("Nilai default untuk float64 = ", defFloat64)
+
+	fmt.Println("\nNilai default untuk complex64 = ", defComplex64)
+	fmt.Println("Nilai default untuk complex128 = ", defComplex128)
+
+	fmt.Println("\nNilai default untuk byte = ", defByte)
+	fmt.Println("Nilai default untuk rune = ", defRune)
+
+}
+~~~
+
+Hasil eksekusi:
+
+```bash
+$ go run nilai-default-variabel.go
+
+Nilai default untuk uint8 =  0
+Nilai default untuk uint16 =  0
+Nilai default untuk uint32 =  0
+Nilai default untuk uint64 =  0
+Nilai default untuk uint =  0
+
+Nilai default untuk int8 =  0
+Nilai default untuk int16 =  0
+Nilai default untuk int32 =  0
+Nilai default untuk int63 =  0
+Nilai default untuk int =  0
+
+Nilai default untuk string =  
+
+Nilai default untuk float32 =  0
+Nilai default untuk float64 =  0
+
+Nilai default untuk complex64 =  (0+0i)
+Nilai default untuk complex128 =  (0+0i)
+
+Nilai default untuk byte =  0
+Nilai default untuk rune =  0
+$
+~~~
 
 ### Konstanta
 
