@@ -1,3 +1,7 @@
+# UNMAINTAINED
+
+Repo ini sekarang sudah dipindahkan dan dikembangkan oleh grup riset [Web Intelligence - STMIK AKAKOM](https://github.com/wi-rg/buku--go-cloud)
+
 # Pengembangan Aplikasi Menggunakan Bahasa Pemrograman Go
 
 ![Gopher](images/gopher.png)
